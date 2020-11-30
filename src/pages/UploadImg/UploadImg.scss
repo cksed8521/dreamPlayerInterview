@@ -1,0 +1,35 @@
+$primary: #4d4d4d;
+$second: #dddddd;
+$bg-gray: #9b9b9b;
+$bg-light: #ffffff;
+
+$large-fontSize: 20px;
+$small-fontSize: 16px;
+$largeSize-width: 90vw;
+$smallSize-width: 100vw;
+$largeSize-padding: 16px;
+$smallSize-padding: 8px;
+
+.outUploadImg {
+  max-width: $largeSize-width;
+  margin-top: 20px;
+  border: 1px solid $primary;
+  padding: $largeSize-padding;
+}
+input {
+  margin-bottom: 20px;
+}
+
+.prevImg {
+  border: 1px solid $primary;
+  padding: $largeSize-padding;
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .outUploadImg {
+    max-width: $smallSize-width;
+  }
+}
