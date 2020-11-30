@@ -1,0 +1,37 @@
+$primary: #4d4d4d;
+$second: #dddddd;
+$bg-gray: #9b9b9b;
+$bg-light: #ffffff;
+
+$largeSize-width: 60vw;
+$smallSize-width: 100vw;
+$largeSize-padding: 16px;
+$smallSize-padding: 8px;
+
+.Scrollheight {
+  padding: $largeSize-padding;
+  overflow: auto;
+  flex: auto;
+  height: 500px;
+
+  .Msgboard {
+    background-color: $second;
+    margin: 20px;
+    padding: $largeSize-padding;
+    border-radius: 8px;
+  }
+  .noMsg {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .Scrollheight {
+    padding: $smallSize-padding;
+  }
+  .Msgboard {
+    padding: $smallSize-padding;
+  }
+}

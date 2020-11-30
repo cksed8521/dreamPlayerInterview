@@ -1,0 +1,38 @@
+$primary: #4d4d4d;
+$second: #dddddd;
+$bg-gray: #9b9b9b;
+$bg-light: #ffffff;
+
+$large-fontSize: 20px;
+$small-fontSize: 16px;
+$largeSize-width: 60vw;
+$smallSize-width: 100vw;
+$largeSize-padding: 16px;
+$smallSize-padding: 8px;
+
+.listItem {
+  padding: $largeSize-padding;
+  border-top: 1px solid $bg-gray;
+
+  .listLink {
+    text-decoration: none;
+    color: $primary;
+  }
+
+  .msgTitle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  .listMsg {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+}

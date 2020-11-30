@@ -1,0 +1,65 @@
+$primary: #4d4d4d;
+$second: #dddddd;
+$bg-gray: #9b9b9b;
+$bg-light: #ffffff;
+$large-fontSize: 20px;
+$small-fontSize: 16px;
+$largeSize-width: 60vw;
+$smallSize-width: 100vw;
+$largeSize-padding: 16px;
+$smallSize-padding: 8px;
+
+.messageItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: $large-fontSize;
+  .textCtn {
+    width: 80%;
+    word-break: break-all;
+  }
+  .Btnarea {
+    margin-right: 20px;
+    .delBtn {
+      cursor: pointer;
+      color: $primary;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+  }
+}
+.replyBtn {
+  cursor: pointer;
+  color: $bg-light;
+  display: flex;
+  justify-content: flex-end;
+  &:hover {
+    color: $primary;
+  }
+}
+.replyInp {
+  input {
+    width: 80%;
+    margin-right: 20px;
+    padding: 10px;
+  }
+}
+
+.replyCtn {
+  width: 80%;
+  margin: 20px 0px 20px 25px;
+  padding: $largeSize-padding;
+  font-size: $large-fontSize;
+  word-break: break-all;
+  border-top: 1px solid $bg-light;
+}
+
+@media (max-width: 576px) {
+  .messageItem {
+    font-size: $small-fontSize;
+
+    .replyCtn {
+      padding: $smallSize-padding;
+      font-size: $small-fontSize;
+    }
+  }
+}
