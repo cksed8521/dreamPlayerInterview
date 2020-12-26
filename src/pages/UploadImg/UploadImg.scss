@@ -16,20 +16,31 @@ $smallSize-padding: 8px;
   border: 1px solid $primary;
   padding: $largeSize-padding;
 }
+
+label {
+  cursor: pointer;
+  background-color: $primary;
+  color: $bg-light;
+  padding: 10px;
+  border-radius: $smallSize-padding;
+}
 input {
-  margin-bottom: 20px;
+  display: none;
 }
 
 .prevImg {
   border: 1px solid $primary;
-  padding: $largeSize-padding;
+  height: 600px;
   img {
+    display: block;
     width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 
 @media (max-width: 576px) {
-  .outUploadImg {
-    max-width: $smallSize-width;
+  .sendPicBtn {
+    text-align: center;
   }
 }

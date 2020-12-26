@@ -2,11 +2,24 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './InfoList.scss'
 function InfoList(props) {
-  const { MsgList, setShowOpen, showOpen } = props
+  const { MsgList, setShowOpen, showOpen, setMsgList } = props
+
+  const sortBy = (key) =>
+    setMsgList(
+      MsgList.data.sort((a, b) => {
+        console.log(typeof parseFloat(a[key]))
+        return parseFloat(a[key] > parseFloat(b[key]))
+      })
+    )
 
   return (
-    <div>
-      {MsgList.map((item, index) => (
+    <>
+      <div className="listTitle">
+        <span>訊息列表</span>
+        <span onClick={() => sortBy('time')}>時間排序</span>
+      </div>
+
+      {MsgList.data.map((item, index) => (
         <div
           key={index}
           className="listItem"
@@ -28,7 +41,7 @@ function InfoList(props) {
           </Link>
         </div>
       ))}
-    </div>
+    </>
   )
 }
 

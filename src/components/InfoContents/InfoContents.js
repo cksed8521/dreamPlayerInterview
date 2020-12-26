@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import { useHistory } from 'react-router-dom'
 
 import './InfoContents.scss'
 
 function InfoContents(props) {
   const { MsgList, setShowOpen, showOpen } = props
   const [showMsg, setShowMsg] = useState('')
+  const paramsId = props.match.params.id ? props.match.params.id : 1
 
   useEffect(() => {
-    setShowMsg(MsgList.filter((value) => value.id === props.match.params.id))
-  }, [props.match.params.id])
+    setShowMsg(MsgList.data.filter((value) => value.id == paramsId))
+  }, [paramsId])
 
   return (
     <div style={{ padding: '16px 50px 16px 16px' }}>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Container } from '@material-ui/core'
-
+import styled from 'styled-components'
 import './UploadImg.scss'
 
 function UploadImg() {
@@ -32,12 +32,17 @@ function UploadImg() {
   return (
     <Container>
       <div className="outUploadImg">
-        <input
-          type="file"
-          name="file"
-          placeholder="Upload an image"
-          onChange={UploadImage}
-        />
+        <div className="sendPicBtn">
+          <label>
+            <input
+              type="file"
+              placeholder="Upload an image"
+              onChange={UploadImage}
+            />
+            上傳圖片
+          </label>
+        </div>
+
         {loading ? (
           <h3>loading....</h3>
         ) : (
